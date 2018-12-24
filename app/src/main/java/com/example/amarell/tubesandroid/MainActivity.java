@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         mSlidingTabLayout=findViewById(R.id.stl_tabs);
         mSlidingTabLayout.setDistributeEvenly(true);
         mSlidingTabLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-        mSlidingTabLayout.setSelectedIndicatorColors(getResources().getColor(R.color.colorAccent));
+        mSlidingTabLayout.setSelectedIndicatorColors(getResources().getColor(R.color.colorwhite));
         mSlidingTabLayout.setCustomTabView(R.layout.tab_view, R.id.tv_tab);
         mSlidingTabLayout.setViewPager(mViewPager);
 
