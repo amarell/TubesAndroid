@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/leaf"
+    tools:context=".Login">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register and Sign in"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:ems="1"
+        android:inputType="textEmailAddress"
+        android:hint="UserName"
+        android:background="#6ef4f4f4"
+        android:drawablePadding="78dp"
+        android:textColorHint="#fff"
+        android:drawableLeft="@drawable/ic_person_white_24dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:ems="1"
+        android:inputType="textPassword"
+        android:hint="......"
+        android:textColorHint="#fff"
+        android:background="#6ef4f4f4"
+        android:drawablePadding="78dp"
+        android:drawableLeft="@drawable/ic_lock_white_24dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Login in"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:background="@drawable/background_login_two"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"
+        android:layout_marginTop="16dp"
+        />
+
+
+    <TextView
+        style="@style/textView_style"
+        android:layout_margin="10dp"
+
+        android:id="@+id/TvSignUp"
+        android:text="Dont Have Account? Sign up Here"/>
+
+
+
+
+
+</LinearLayout>
