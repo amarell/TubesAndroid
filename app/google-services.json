@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "996182837027",
+    "firebase_url": "https://tubesandroid-27fe8.firebaseio.com",
+    "project_id": "tubesandroid-27fe8",
+    "storage_bucket": "tubesandroid-27fe8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996182837027:android:68d20c2e841b5699",
+        "android_client_info": {
+          "package_name": "com.example.amarell.tubesandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "996182837027-jrudc9p8b021plq7qi5tk4homf10tiqu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.amarell.tubesandroid",
+            "certificate_hash": "e1686c2c74579df172dfa78ff14cad51b98d8592"
+          }
+        },
+        {
+          "client_id": "996182837027-epp9juu9nojgtubld1jgrveh7egi0epu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZENxIzM-gK_Oi4CswATMPLqoMI1wJsK0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "996182837027-epp9juu9nojgtubld1jgrveh7egi0epu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
