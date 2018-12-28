@@ -10,7 +10,7 @@
     android:paddingRight="18dp"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/leaf"
-    tools:context=".Login">
+    tools:context=".Register">
 
     <TextView
         android:layout_width="wrap_content"
@@ -53,11 +53,11 @@
         />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Login in"
+        android:text="Register"
         android:textAllCaps="true"
         android:textColor="#fff"
         android:background="@drawable/background_login_two"
@@ -70,10 +70,8 @@
     <TextView
         style="@style/textView_style"
         android:layout_margin="10dp"
-
-        android:id="@+id/TvSignUp"
-        android:text="Dont Have Account? Sign up Here"/>
-
+        android:id="@+id/TvSignIn"
+        android:text="Already Have Account? Login Here"/>
 
 
 
