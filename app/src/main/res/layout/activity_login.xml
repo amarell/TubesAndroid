@@ -30,7 +30,7 @@
         android:padding="16dp"
         android:ems="1"
         android:inputType="textEmailAddress"
-        android:hint="Email"
+        android:hint="@string/Email"
         android:background="#6ef4f4f4"
         android:drawablePadding="78dp"
         android:textColorHint="#fff"
@@ -45,7 +45,7 @@
         android:padding="16dp"
         android:ems="1"
         android:inputType="textPassword"
-        android:hint="......"
+        android:hint="@string/Password"
         android:textColorHint="#fff"
         android:background="#6ef4f4f4"
         android:drawablePadding="78dp"
@@ -57,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Login in"
+        android:text="@string/login"
         android:textAllCaps="true"
         android:textColor="#fff"
         android:background="@drawable/background_login_two"
@@ -72,7 +72,7 @@
         android:layout_margin="10dp"
 
         android:id="@+id/TvSignUp"
-        android:text="Dont Have Account? Sign up Here"/>
+        android:text="@string/signup"/>
 
 
 

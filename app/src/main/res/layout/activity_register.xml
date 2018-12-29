@@ -15,7 +15,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register and Sign in"
+        android:text="@string/reg"
         android:textAllCaps="true"
         android:textStyle="bold"
         android:textSize="18sp"
@@ -30,7 +30,7 @@
         android:padding="16dp"
         android:ems="1"
         android:inputType="textEmailAddress"
-        android:hint="Email"
+        android:hint="@string/Email"
         android:background="#6ef4f4f4"
         android:drawablePadding="78dp"
         android:textColorHint="#fff"
@@ -45,7 +45,7 @@
         android:padding="16dp"
         android:ems="1"
         android:inputType="textPassword"
-        android:hint="......"
+        android:hint="@string/Password"
         android:textColorHint="#fff"
         android:background="#6ef4f4f4"
         android:drawablePadding="78dp"
@@ -57,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Register"
+        android:text="@string/Register"
         android:textAllCaps="true"
         android:textColor="#fff"
         android:background="@drawable/background_login_two"
@@ -71,7 +71,7 @@
         style="@style/textView_style"
         android:layout_margin="10dp"
         android:id="@+id/TvSignIn"
-        android:text="Already Have Account? Login Here"/>
+        android:text="@string/signin"/>
 
 
 

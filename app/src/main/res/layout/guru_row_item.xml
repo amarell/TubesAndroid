@@ -36,7 +36,7 @@
                     android:id="@+id/rowname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nama Guru"
+                    android:text="@string/nama"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -45,13 +45,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Nama Mapel" />
+                    android:text="@string/mapel" />
 
                 <TextView
                     android:id="@+id/status_booking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="status" />
+                    android:text="@string/status" />
 
 
 
@@ -79,7 +79,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="25dp"
                 style="@style/Widget.AppCompat.Button.Colored"
-                android:text="Chat"/>
+                android:text="@string/chat"/>
 
             <Button
                 android:id="@+id/btn_set_telpon"
@@ -89,7 +89,7 @@
                 android:layout_marginRight="25dp"
                 android:layout_marginLeft="5dp"
                 style="@style/Widget.AppCompat.Button.Colored"
-                android:text="Telpon"/>
+                android:text="@string/phone"/>
 
         </LinearLayout>
     </LinearLayout>
