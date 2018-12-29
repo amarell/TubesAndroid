@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_main,menu);
         MenuItem item = menu.findItem(R.id.action_search);
         android.widget.SearchView searchView =(android.widget.SearchView)item.getActionView();
+        //l
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
