@@ -15,7 +15,11 @@
     <string name="status">Status</string>
     <string name="chat">Chat</string>
     <string name="phone">Phone</string>
-
+    <string name="list">Teacher Lists</string>
+    <string name="edu">Education</string>
+    <string name="prestasi">Achievement</string>
+    <string name="exper">Experience</string>
+    <string name="desk">Teacher description</string>
 
 
 

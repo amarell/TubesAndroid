@@ -44,16 +44,16 @@ public class ListGuruAdapter extends RecyclerView.Adapter<ListGuruAdapter.MyView
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, DetailGuru.class );
-                intent.putExtra("id_kursus", mData.get(myViewHolder.getAdapterPosition()).getId());
+                intent.putExtra("id", mData.get(myViewHolder.getAdapterPosition()).getId());
                 intent.putExtra("namaguru", mData.get(myViewHolder.getAdapterPosition()).getNama());
-                intent.putExtra("statusbayar", mData.get(myViewHolder.getAdapterPosition()).getPendidikan());
-                intent.putExtra("statusles", mData.get(myViewHolder.getAdapterPosition()).getNama_mapel());
-                intent.putExtra("statusbooking", mData.get(myViewHolder.getAdapterPosition()).getDeskripsi());
-                intent.putExtra("hari", mData.get(myViewHolder.getAdapterPosition()).getPengalaman());
-                intent.putExtra("jam", mData.get(myViewHolder.getAdapterPosition()).getPrestasi());
-                intent.putExtra("jumlahpertemuan", mData.get(myViewHolder.getAdapterPosition()).getTelpon());
+                intent.putExtra("pendidikan", mData.get(myViewHolder.getAdapterPosition()).getPendidikan());
+                intent.putExtra("mapel", mData.get(myViewHolder.getAdapterPosition()).getNama_mapel());
+                intent.putExtra("deskripsi", mData.get(myViewHolder.getAdapterPosition()).getDeskripsi());
+                intent.putExtra("pengalaman", mData.get(myViewHolder.getAdapterPosition()).getPengalaman());
+                intent.putExtra("prestasi", mData.get(myViewHolder.getAdapterPosition()).getPrestasi());
+                intent.putExtra("telepon", mData.get(myViewHolder.getAdapterPosition()).getTelpon());
 
-                intent.putExtra("jumlahpertemuan", mData.get(myViewHolder.getAdapterPosition()).getTarif());
+                intent.putExtra("tarif", mData.get(myViewHolder.getAdapterPosition()).getTarif());
                 intent.putExtra("foto_guru", "http://192.168.43.64/webtemanbelajar/dokumen/profil/"+mData.get(myViewHolder.getAdapterPosition()).getFoto_profil());
                 mContext.startActivity(intent);
             }

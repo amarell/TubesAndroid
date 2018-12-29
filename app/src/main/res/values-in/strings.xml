@@ -16,7 +16,11 @@
     <string name="status">Status</string>
     <string name="chat">Kirim Pesan</string>
     <string name="phone">Telefon</string>
-
+    <string name="list">Daftar Guru</string>
+    <string name="edu">Pendidikan</string>
+    <string name="prestasi">Prestasi</string>
+    <string name="exper">Pengalaman</string>
+    <string name="desk">Deskripsi guru</string>
 
 
 
