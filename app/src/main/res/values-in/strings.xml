@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tubes Android</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="Search">Cari</string>
+    <string name="Email">Email</string>
+    <string name="Password">Kata Sandi</string>
+    <string name="login">Masuk Disini</string>
+    <string name="signup">Anda Belum Memiliki Akun? Daftar Disini</string>
+    <string name="reg">Daftar dan Masuk</string>
+    <string name="Register">Daftar</string>
+    <string name="signin">Anda Sudah Memiliki Akun? Masuk Disini</string>
+    <string name="nama">Nama Guru</string>
+    <string name="mapel">Nama Mapel</string>
+    <string name="tarif">Harga: </string>
+    <string name="status">Status</string>
+    <string name="chat">Kirim Pesan</string>
+    <string name="phone">Telefon</string>
+
+
+
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

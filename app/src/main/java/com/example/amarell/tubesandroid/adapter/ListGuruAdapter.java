@@ -64,9 +64,12 @@ public class ListGuruAdapter extends RecyclerView.Adapter<ListGuruAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.nama.setText(mData.get(position).getNama());
-        holder.mapel.setText(mData.get(position).getNama_mapel());
-        holder.status.setText(mData.get(position).getTarif());
+        /*int pokeCount=3;
+        String hello=String.format(mContext.getResources().getString(R.string.nama),"Andi",pokeCount,"Budi");*/
+
+        holder.nama.setText(mContext.getResources().getString(R.string.nama)+ " " + mData.get(position).getNama());
+        holder.mapel.setText(mContext.getResources().getString(R.string.mapel)+ " " +mData.get(position).getNama_mapel());
+        holder.status.setText(mContext.getResources().getString(R.string.tarif)+ " " +mData.get(position).getTarif());
         Glide.with(mContext).load("http://192.168.43.64/webtemanbelajar/dokumen/profil/"+mData.get(position).getFoto_profil()).apply(option).into(holder.imageView);
 
     }
