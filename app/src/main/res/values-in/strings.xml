@@ -10,17 +10,17 @@
     <string name="reg">Daftar dan Masuk</string>
     <string name="Register">Daftar</string>
     <string name="signin">Anda Sudah Memiliki Akun? Masuk Disini</string>
-    <string name="nama">Nama Guru</string>
-    <string name="mapel">Nama Mapel</string>
-    <string name="tarif">Harga: </string>
-    <string name="status">Status</string>
-    <string name="chat">Kirim Pesan</string>
-    <string name="phone">Telefon</string>
+    <string name="nama">Nama Guru : </string>
+    <string name="mapel">Nama Mapel : </string>
+    <string name="tarif">Harga : </string>
+    <string name="status">Status : </string>
+    <string name="chat">Kirim Pesan : </string>
+    <string name="phone">Telpon</string>
     <string name="list">Daftar Guru</string>
-    <string name="edu">Pendidikan</string>
-    <string name="prestasi">Prestasi</string>
-    <string name="exper">Pengalaman</string>
-    <string name="desk">Deskripsi guru</string>
+    <string name="edu">Pendidikan : </string>
+    <string name="prestasi">Prestasi : </string>
+    <string name="exper">Pengalaman : </string>
+    <string name="desk">Deskripsi guru : </string>
 
 
 

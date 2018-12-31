@@ -9,17 +9,17 @@
     <string name="reg">Register and Sign in</string>
     <string name="Register">Register</string>
     <string name="signin">Already Have Account? Login Here</string>
-    <string name="nama">Teacher Name: </string>
-    <string name="mapel">Subject Name: </string>
-    <string name="tarif">Cost: </string>
-    <string name="status">Status</string>
+    <string name="nama">Teacher Name  : </string>
+    <string name="mapel">Subject Name : </string>
+    <string name="tarif">Cost : </string>
+    <string name="status">Status : </string>
     <string name="chat">Chat</string>
     <string name="phone">Phone</string>
     <string name="list">Teacher Lists</string>
-    <string name="edu">Education</string>
-    <string name="prestasi">Achievement</string>
-    <string name="exper">Experience</string>
-    <string name="desk">Teacher description</string>
+    <string name="edu">Education  : </string>
+    <string name="prestasi">Achievement : </string>
+    <string name="exper">Experience : </string>
+    <string name="desk">Teacher description : </string>
 
 
 
