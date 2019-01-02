@@ -2,6 +2,7 @@ package com.example.amarell.tubesandroid.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.amarell.tubesandroid.CustomOnItemClickListener;
 import com.example.amarell.tubesandroid.DetailGuru;
 import com.example.amarell.tubesandroid.R;
 import com.example.amarell.tubesandroid.model.DataGuru;
@@ -72,6 +74,27 @@ public class ListGuruAdapter extends RecyclerView.Adapter<ListGuruAdapter.MyView
         holder.status.setText(mContext.getResources().getString(R.string.tarif)+ " " +mData.get(position).getTarif());
         Glide.with(mContext).load("http://192.168.43.64/webtemanbelajar/dokumen/profil/"+mData.get(position).getFoto_profil()).apply(option).into(holder.imageView);
 
+        int panjang=mData.get(position).getTelpon().length();
+        String apiwa="https://api.whatsapp.com/send?phone=";
+        final String url = apiwa+"+62"+mData.get(position).getTelpon();
+        final String telpon="+62"+mData.get(position).getTelpon().substring(1, panjang);
+        holder.chat.setOnClickListener(new CustomOnItemClickListener(position, new CustomOnItemClickListener.OnItemClickCallback() {
+            @Override
+            public void onItemClicked(View view, int position) {
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                mContext.startActivity(i);
+            }
+        }));
+
+        holder.telpon.setOnClickListener(new CustomOnItemClickListener(position, new CustomOnItemClickListener.OnItemClickCallback() {
+            @Override
+            public void onItemClicked(View view, int position) {
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", telpon, null));
+                mContext.startActivity(intent);
+
+            }
+        }));
     }
 
     @Override
