@@ -35,59 +35,33 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public class HomeFragment extends Fragment {
     private static final String TAG = "Home Fragment";
     private static String URL="http://192.168.43.64/temanbelajar/coba.php";
     private List<DataGuru> listGuru;
     private RecyclerView recyclerView;
-
     String id;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
         guruRequest();
-
-
-
     }
-
-
-
     public HomeFragment() {
         // Required empty public constructor
     }
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         rootView.setTag(TAG);
-
         id = "2";
-
         listGuru = new ArrayList<>();
-
         recyclerView=rootView.findViewById(R.id.rv);
-
-
         return rootView;
-
     }
-
     private void guruRequest() {
-
         final String id2 = "2";
-
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL,
                 new Response.Listener<String>() {
                     @Override
@@ -96,12 +70,10 @@ public class HomeFragment extends Fragment {
                             JSONObject jsonObject = new JSONObject(response);
                             String success = jsonObject.getString("success");
                             JSONArray jsonArray = jsonObject.getJSONArray("data");
-
                             if (success.equals("1")){
                                 for (int i=0; i<jsonArray.length(); i++){
                                     JSONObject object = jsonArray.getJSONObject(i);
                                     DataGuru dataGuru = new DataGuru();
-
                                     dataGuru.setId(object.getString("id"));
                                     dataGuru.setNama(object.getString("nama"));
                                     dataGuru.setPendidikan(object.getString("pendidikan"));
@@ -110,27 +82,19 @@ public class HomeFragment extends Fragment {
                                     dataGuru.setPengalaman(object.getString("pengalaman"));
                                     dataGuru.setPrestasi(object.getString("prestasi"));
                                     dataGuru.setFoto_profil(object.getString("foto_profil"));
-
                                     dataGuru.setId_mengajar(object.getString("id_mengajar"));
                                     dataGuru.setTarif(object.getString("tarif"));
                                     dataGuru.setTelpon(object.getString("telpon"));
-
-
-
                                     listGuru.add(dataGuru);
                                 }
-
                             }else if (success.equals("0")){
                                Toast.makeText(getActivity(), "Belum Ada Guru", Toast.LENGTH_SHORT).show();
                             }
-
                         } catch (JSONException e) {
                             e.printStackTrace();
                             Toast.makeText(getActivity(), "Error "+e.toString(), Toast.LENGTH_SHORT).show();
                         }
-
                         setuprecyclerview(listGuru);
-
                     }
                 },
                 new Response.ErrorListener() {
@@ -147,15 +111,12 @@ public class HomeFragment extends Fragment {
                 return params;
             }
         };
-
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         requestQueue.add(stringRequest);
     }
     private void setuprecyclerview(List<DataGuru> listGuru) {
-
         ListGuruAdapter myadapter = new ListGuruAdapter(getActivity(), listGuru);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
         recyclerView.setAdapter(myadapter);
     }
 

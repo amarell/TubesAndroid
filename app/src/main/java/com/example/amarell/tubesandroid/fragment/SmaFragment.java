@@ -10,13 +10,11 @@ import android.view.ViewGroup;
 
 import com.example.amarell.tubesandroid.R;
 
-
 public class SmaFragment extends Fragment {
 
     public SmaFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

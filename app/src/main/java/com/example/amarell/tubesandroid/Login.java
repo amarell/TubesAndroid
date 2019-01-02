@@ -18,39 +18,29 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Login extends AppCompatActivity implements View.OnClickListener{
     FirebaseAuth mAuth;
     EditText EtEmail, EtPassword;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-
         mAuth= FirebaseAuth.getInstance();
         EtEmail =(EditText) findViewById(R.id.username);
         EtPassword=(EditText) findViewById(R.id.password);
-        //jj
-
         findViewById(R.id.login).setOnClickListener(this);
         findViewById(R.id.TvSignUp).setOnClickListener(this);
-
 }
-
     private void userlogin() {
         String email = EtEmail.getText().toString().trim();
         String password= EtPassword.getText().toString().trim();
-
         if (email.isEmpty()){
             EtEmail.setError("Email harus Diisi");
             EtEmail.requestFocus();
             return;
         }
-
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             EtEmail.setError("Masukan Email Yang Valid");
             EtEmail.requestFocus();
             return;
         }
-
         if (password.isEmpty()){
             EtPassword.setError("Password harus diisi");
             EtPassword.requestFocus();
@@ -76,20 +66,15 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
             }
         });
     }
-
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.TvSignUp:
-
                 startActivity(new Intent(this, Register.class));
                 break;
-
             case R.id.login:
                 userlogin();
                 break;
         }
     }
-
-
 }

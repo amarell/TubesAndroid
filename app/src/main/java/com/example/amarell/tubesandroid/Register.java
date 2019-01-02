@@ -23,38 +23,31 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
         EtEmail=(EditText) findViewById(R.id.username);
         EtPassword=(EditText) findViewById(R.id.password);
-
         findViewById(R.id.TvSignIn).setOnClickListener(this);
         findViewById(R.id.register).setOnClickListener(this);
-
         mAuth = FirebaseAuth.getInstance();
     }
 
     private void registeruser(){
         String email = EtEmail.getText().toString().trim();
         String password= EtPassword.getText().toString().trim();
-
         if (email.isEmpty()){
             EtEmail.setError("Email harus diisi");
             EtEmail.requestFocus();
             return;
         }
-
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             EtEmail.setError("Masukan Email Yang Valid");
             EtEmail.requestFocus();
             return;
         }
-
         if (password.isEmpty()){
             EtPassword.setError("Password harus diisi");
             EtPassword.requestFocus();
             return;
         }
-
         if (password.length()<6){
             EtPassword.setError("Password minimal 6 karakter");
             EtPassword.requestFocus();
@@ -64,7 +57,6 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-
                         if (task.isSuccessful()){
                             Toast.makeText(getApplicationContext(), "User Berhasil Registrasi", Toast.LENGTH_SHORT).show();
                         }else{
@@ -73,14 +65,10 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 
                             }else{
                                 Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-
                             }
-
                         }
-
                     }
                 });
-
     }
 
     @Override
@@ -89,10 +77,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
             case R.id.register:
                 registeruser();
                 break;
-
             case R.id.TvSignIn:
                 startActivity(new Intent(this, Login.class));
         }
-
     }
 }

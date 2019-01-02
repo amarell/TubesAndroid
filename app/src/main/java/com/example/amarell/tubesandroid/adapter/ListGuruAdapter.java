@@ -33,14 +33,12 @@ public class ListGuruAdapter extends RecyclerView.Adapter<ListGuruAdapter.MyView
         this.mData = mData;
         option=new RequestOptions().centerCrop().placeholder(R.drawable.loading).error(R.drawable.loading);
     }
-
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         LayoutInflater inflater = LayoutInflater.from(mContext);
         view=inflater.inflate(R.layout.guru_row_item, parent, false);
-
         final MyViewHolder myViewHolder = new MyViewHolder(view);
         myViewHolder.containertransaksi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,13 +52,11 @@ public class ListGuruAdapter extends RecyclerView.Adapter<ListGuruAdapter.MyView
                 intent.putExtra("pengalaman", mData.get(myViewHolder.getAdapterPosition()).getPengalaman());
                 intent.putExtra("prestasi", mData.get(myViewHolder.getAdapterPosition()).getPrestasi());
                 intent.putExtra("telepon", mData.get(myViewHolder.getAdapterPosition()).getTelpon());
-
                 intent.putExtra("tarif", mData.get(myViewHolder.getAdapterPosition()).getTarif());
                 intent.putExtra("foto_guru", "http://192.168.43.64/webtemanbelajar/dokumen/profil/"+mData.get(myViewHolder.getAdapterPosition()).getFoto_profil());
                 mContext.startActivity(intent);
             }
         });
-
         return myViewHolder;
     }
 
@@ -68,7 +64,6 @@ public class ListGuruAdapter extends RecyclerView.Adapter<ListGuruAdapter.MyView
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         /*int pokeCount=3;
         String hello=String.format(mContext.getResources().getString(R.string.nama),"Andi",pokeCount,"Budi");*/
-
         holder.nama.setText(mContext.getResources().getString(R.string.nama)+ " " + mData.get(position).getNama());
         holder.mapel.setText(mContext.getResources().getString(R.string.mapel)+ " " +mData.get(position).getNama_mapel());
         holder.status.setText(mContext.getResources().getString(R.string.tarif)+ " " +mData.get(position).getTarif());
@@ -86,13 +81,11 @@ public class ListGuruAdapter extends RecyclerView.Adapter<ListGuruAdapter.MyView
                 mContext.startActivity(i);
             }
         }));
-
         holder.telpon.setOnClickListener(new CustomOnItemClickListener(position, new CustomOnItemClickListener.OnItemClickCallback() {
             @Override
             public void onItemClicked(View view, int position) {
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", telpon, null));
                 mContext.startActivity(intent);
-
             }
         }));
     }
@@ -101,7 +94,6 @@ public class ListGuruAdapter extends RecyclerView.Adapter<ListGuruAdapter.MyView
     public int getItemCount() {
         return mData.size();
     }
-
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
         TextView nama, mapel, status;
